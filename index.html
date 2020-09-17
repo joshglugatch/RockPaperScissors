@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var choices = ["r", "p", "s"];
+        var userScore = 0;
+        var computerScore = 0;
+
+        /* while loop */
+        while (userScore + computerScore < 3) {
+            var userChoice = prompt("rock('r') paper('p') or scissors('s')?");
+            var computerChoice = choices[Math.floor(Math.random() * choices.length)];
+            var computerChoice = computerChoice.toLocaleLowerCase;
+            
+            alert("Computer chooses " + computerChoice);
+
+            if (userChoice == computerChoice) {
+                alert("It's a tie! No points for either of you! haha 'murica ya!");
+                alert("User: " + userScore + "; Computer: " + computerScore);
+            }
+
+            else if (userChoice == "r" && computerChoice == "s") {
+                alert("User wins! You get 1 point!");
+                userScore += 1;
+                alert("User: " + userScore + "; Computer: " + computerScore);
+            }
+
+            else if (userChoice == "r" && computerChoice == "p") {
+                alert("Computer wins! Computer gets 1 point!");
+                computerScore += 1;
+                alert("User: " + userScore + "; Computer: " + computerScore);
+            }
+
+            else if (userChoice == "s" && computerChoice == "r") {
+                alert("Computer wins! Computer gets 1 point!");
+                computerScore += 1;
+                alert("User: " + userScore + "; Computer: " + computerScore);
+            }
+
+            else if (userChoice == "s" && computerChoice == "p") {
+                alert("User wins! You get 1 point!");
+                userScore += 1;
+                alert("User: " + userScore + "; Computer: " + computerScore);
+            }
+
+            else if (userChoice == "p" && computerChoice == "r") {
+                alert("User wins! You get 1 point!");
+                userScore += 1;
+                alert("User: " + userScore + "; Computer: " + computerScore);
+            }
+
+            else if (userChoice == "p" && computerChoice == "s") {
+                alert("Computer wins! Computer gets 1 point!");
+                computerScore += 1;
+                alert("User: " + userScore + "; Computer: " + computerScore);
+            }
+        }
+
+        if (userScore > computerScore) {
+            alert("You win!");
+        }
+        else {
+            alert("You lose!");
+        }
+
+
+
+    </script>
+</body>
+
+</html>
